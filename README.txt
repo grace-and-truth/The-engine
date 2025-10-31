@@ -1,1 +1,3 @@
-This project is designed as a solution to workflow automation, content repurposing and email outreach
+This version features key improvements from the original main
+basic functionality for each page
+stylized home page
