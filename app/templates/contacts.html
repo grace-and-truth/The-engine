@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Contacts | Creator's Engine</title>
+        <script>
+            async function sendContact() {
+                const name = document.getElementById("name").value;
+                const message = document.getElementById("message").value;
+                const res = await fetch("/contact/", {
+                    method: "POST",
+                    headers: {"content-Type": "application/x-www-form-urlencoded"},
+                    body: 'name=${encodeURLComponent(name)}&message=${encodeURLComponent(message)}'
+
+                })
+                const data = await res.json();
+                document.getElementById("output").textContent= data.status || data.console.error();
+                
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1>contact form</h1>
+        <input id="name"placeholder="Your name"><br>
+        <textarea id="message" placeholder="Your message"></textarea><br>
+        <button onclick="sendContact()">send</button>
+        <div id="output"></div>
+    </body>
+</html>
