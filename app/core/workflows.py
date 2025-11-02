@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify, render_template
 
-workflows_bp = Blueprint('workflow', __name__)
+workflows_bp = Blueprint('workflows', __name__)
 
-@workflow_bp.route('/', methods=['GET'])
+@workflows_bp.route('/', methods=['GET'])
 def index():
     return render_template('workflows.html')
 
