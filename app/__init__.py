@@ -3,7 +3,7 @@ from .core.rephrase import rephrase_bp
 from .core.emailer import emailer_bp
 from .core.contacts import contact_bp
 from .core.calendar import calendar_bp
-from .core.workflows import workflows_bp
+from .core.workflows import workflow_bp
 
 def create_app():
     app = Flask(__name__)
