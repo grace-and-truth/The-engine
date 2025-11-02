@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rephrase | Creator’s Engine</title>
+  <script>
+      <url>
+          <li></li><a href="rephrase" rephrase></a><li></li>
+          <li><a href="Email">email</a></li>
+      </url>
+    async function rephraseText() {
+      const text = document.getElementById("inputText").value;
+      const res = await fetch("/rephrase/", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: `text=${encodeURIComponent(text)}`
+      });
+      const data = await res.json();
+      document.getElementById("output").textContent = data.result || data.error;
+    }
+  </script>
+</head>
+<body>
+  <h1>Rephrase Tool</h1>
+  <textarea id="inputText" rows="4" cols="50"></textarea><br>
+  <button onclick="rephraseText()">Rephrase</button>
+  <p><strong>Output:</strong></p>
+  <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Generator | Creator’s Engine</title>
+  <script>
+    async function generateEmail() {
+      const subject = document.getElementById("subject").value;
+      const idea = document.getElementById("idea").value;
+      const res = await fetch("/email/", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: `subject=${encodeURIComponent(subject)}&idea=${encodeURIComponent(idea)}`
+      });
+      const data = await res.json();
+      document.getElementById("output").textContent = data.email || data.error;
+    }
+  </script>
+</head>
+<body>
+  <h1>Email Generator</h1>
+  <input type="text" id="subject" placeholder="Email Subject"><br>
+  <textarea id="idea" placeholder="What’s the email about?" rows="4" cols="50"></textarea><br>
+  <button onclick="generateEmail()">Generate</button>
+  <p><strong>Generated Email:</strong></p>
+  <div id="output"></div>
+</body>
+</html>
