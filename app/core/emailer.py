@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, jsonify
 
-email_bp = Blueprint('email', __name__)
+emailer_bp = Blueprint('email', __name__)
 
 @email_bp.route('/', methods=['GET', 'POST'])
 def generate_email():
