@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creator’s Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/static/images/icon.png" />
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 flex flex-col items-center justify-center font-sans">
+
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 tracking-tight">
+      Creator’s Engine
+    </h1>
+    <p class="text-gray-600 mt-2 text-lg">
+      Build, automate & create — one tool at a time.
+    </p>
+  </header>
+
+  <!-- Main content -->
+  <main class="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+    <!-- Rephrase -->
+    <a href="/templates/rephrase" class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+      <div class="text-blue-600 text-3xl mb-2">✍️</div>
+      <h2 class="font-semibold text-lg text-gray-800">Rephrase Tool</h2>
+      <p class="text-gray-500 text-sm text-center mt-2">Rewrite your ideas effortlessly with AI assistance.</p>
+    </a>
+
+    <!-- Email Generator -->
+    <a href="/email" class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+      <div class="text-indigo-600 text-3xl mb-2">📧</div>
+      <h2 class="font-semibold text-lg text-gray-800">Email Generator</h2>
+      <p class="text-gray-500 text-sm text-center mt-2">Draft professional, personalized emails in seconds.</p>
+    </a>
+
+    <!-- Contact -->
+    <a href="/contact" class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+      <div class="text-green-600 text-3xl mb-2">💬</div>
+      <h2 class="font-semibold text-lg text-gray-800">Contact Form</h2>
+      <p class="text-gray-500 text-sm text-center mt-2">Send quick messages or user feedback here.</p>
+    </a>
+
+    <!-- Calendar -->
+    <a href="/calendar" class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+      <div class="text-amber-600 text-3xl mb-2">📅</div>
+      <h2 class="font-semibold text-lg text-gray-800">Calendar</h2>
+      <p class="text-gray-500 text-sm text-center mt-2">Plan and organize content deadlines and events.</p>
+    </a>
+
+    <!-- Workflows -->
+    <a href="/workflows" class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+      <div class="text-purple-600 text-3xl mb-2">⚙️</div>
+      <h2 class="font-semibold text-lg text-gray-800">Workflows</h2>
+      <p class="text-gray-500 text-sm text-center mt-2">Manage automations and webhook integrations.</p>
+    </a>
+
+    <!-- Placeholder for future feature -->
+    <div class="bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-2xl shadow-inner flex flex-col items-center justify-center text-gray-500">
+      <div class="text-3xl mb-2">🚀</div>
+      <p class="font-medium">Coming Soon</p>
+      <p class="text-sm text-gray-400 mt-1">More creator tools loading...</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-gray-500 text-sm">
+    © {{ current_year or '2025' }} Creator’s Engine • Built by Lawrence Njihia
+  </footer>
+</body>
+</html>
