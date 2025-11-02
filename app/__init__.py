@@ -8,7 +8,7 @@ from .core.workflows import workflows_bp
 def create_app():
     app = Flask(__name__)
 
-    Register blueprints
+    # Register blueprints
     app.register_blueprint(rephrase_bp)
     app.register_blueprint(emailer_bp)
     app.register_blueprint(contact_bp)
